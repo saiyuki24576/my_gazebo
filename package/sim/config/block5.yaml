@@ -1,0 +1,24 @@
+block5:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 25
+
+  Joint1_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint1
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint2_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint2
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint3_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint3
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint4_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint4
+    pid: {p: 100.0, i: 0, d: 0}

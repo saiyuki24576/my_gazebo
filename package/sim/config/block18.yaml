@@ -1,0 +1,49 @@
+block18:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 25
+
+  Joint1_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint1
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint2_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint2
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint3_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint3
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint4_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint4
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint5_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint5
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint6_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint6
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint7_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint7
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint8_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint8
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint9_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint9
+    pid: {p: 100.0, i: 0, d: 0}

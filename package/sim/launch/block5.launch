@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+      <arg name="paused" value="false"/>
+  </include>
+
+  <arg name="model1" default="$(find sim)/urdf/block5.urdf" />
+
+  <arg name="yaml1" default="$(find sim)/config/block5.yaml"/>
+
+  <arg name="pos" value="-0.45"/>
+  <param name="robot_description" command="$(find xacro)/xacro.py $(arg model1)" />
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -x $(arg pos) -model block5" />
+
+  <rosparam file="$(arg yaml1)" command="load"/>
+  <node name="controller_spawner1" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/block5" args="
+joint_state_controller
+Joint1_position_controller
+Joint2_position_controller
+Joint3_position_controller
+Joint4_position_controller
+"/>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+
+</launch>
